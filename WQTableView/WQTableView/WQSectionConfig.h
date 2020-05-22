@@ -25,4 +25,13 @@ typedef NS_ENUM(NSUInteger, WQSectionType) {
 - (instancetype)initWithSectionType:(WQSectionType)sectionType
                         sectionView:(UIView *)sectionView;
 
+
+
+- (UIView *)sectionTitleView;
+
+/**
+  高度默认值是20
+ */
+- (CGFloat)sectionHeigh;
+
 @end

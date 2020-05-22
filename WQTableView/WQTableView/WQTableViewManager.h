@@ -10,11 +10,11 @@
 #import <UIKit/UIKit.h>
 #import "WQSectionConfig.h"
 #import "UITableViewCell+WQAdd.h"
-
-
-NS_ASSUME_NONNULL_BEGIN
+#import "WQRightDetailTableViewCell.h"
+#import "WQSwitchButtonTableViewCell.h"
 
 @interface WQTableViewManager : NSObject
+
 
 @property (nonatomic, strong, readonly) UITableView *tableView;
 
@@ -25,8 +25,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadTableView;
 
-
-
 @end
-
-NS_ASSUME_NONNULL_END

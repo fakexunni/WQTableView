@@ -7,5 +7,6 @@ target 'WQTableView' do
 
   # Pods for WQTableView
   pod 'Masonry'
+  pod 'YYKit'
 end
 

@@ -8,7 +8,7 @@
 
 #import "WQTableViewManager.h"
 #import "UITableViewCell+WQAdd.h"
-
+#import <YYKit.h>
 
 @interface WQTableViewManager () <UITableViewDelegate, UITableViewDataSource>
 
@@ -53,7 +53,7 @@
                didSelect:(WQTableViewDidSelectedCell)selectedBlock
 {
     if (self.cellArray.count == 0) {
-        NSAssert(1, @"请先添加一个WQSectionConfig");
+        NSAssert(0, @"请先添加一个WQSectionConfig");
         return;
     }
     cell.selectedBlock = selectedBlock;
@@ -66,19 +66,21 @@
     [self.tableView reloadData];
 }
 
-
 #pragma -mark UITableViewDataSource
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    NSMutableArray *sectionArray = [_cellArray objectAtIndex:indexPath.section];
-    UITableViewCell *cell = [sectionArray objectAtIndex:indexPath.row];
+    NSMutableArray *sectionArray = [_cellArray objectOrNilAtIndex:indexPath.section];
+    UITableViewCell *cell = [sectionArray objectOrNilAtIndex:indexPath.row];
+    if (!cell.selectedBlock) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSMutableArray *sectionArray = [self.cellArray objectAtIndex:section];
+    NSMutableArray *sectionArray = [self.cellArray objectOrNilAtIndex:section];
     return sectionArray.count;
 }
 
@@ -87,13 +89,38 @@
     return self.sectionHeaderArray.count;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    WQSectionConfig *config = [self.sectionHeaderArray objectOrNilAtIndex:section];
+    return [config sectionTitleView];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    WQSectionConfig *config = [self.sectionFooterArray objectOrNilAtIndex:section];
+    return [config sectionTitleView];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    WQSectionConfig *config = [self.sectionHeaderArray objectOrNilAtIndex:section];
+    return [config sectionHeigh];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    WQSectionConfig *config = [self.sectionFooterArray objectOrNilAtIndex:section];
+    return [config sectionHeigh];
+}
+
+
 #pragma -mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSMutableArray *sectionArray = [_cellArray objectAtIndex:indexPath.section];
-    UITableViewCell *cell = [sectionArray objectAtIndex:indexPath.row];
+    NSMutableArray *sectionArray = [_cellArray objectOrNilAtIndex:indexPath.section];
+    UITableViewCell *cell = [sectionArray objectOrNilAtIndex:indexPath.row];
     if (cell.selectedBlock) {
         cell.selectedBlock(cell);
     }

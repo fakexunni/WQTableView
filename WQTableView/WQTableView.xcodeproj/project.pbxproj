@@ -20,6 +20,8 @@
 		B64FC95E2477656300CFC5C7 /* WQTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B64FC95D2477656300CFC5C7 /* WQTableViewManager.m */; };
 		B64FC961247769D600CFC5C7 /* UITableViewCell+WQAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B64FC960247769D600CFC5C7 /* UITableViewCell+WQAdd.m */; };
 		B6B327A124777D9100BDEC16 /* WQSectionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A024777D9100BDEC16 /* WQSectionConfig.m */; };
+		B6B327A52477A7E000BDEC16 /* WQRightDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */; };
+		B6B327A82477A93500BDEC16 /* WQSwitchButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		B64FC960247769D600CFC5C7 /* UITableViewCell+WQAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+WQAdd.m"; sourceTree = "<group>"; };
 		B6B3279F24777D9100BDEC16 /* WQSectionConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSectionConfig.h; sourceTree = "<group>"; };
 		B6B327A024777D9100BDEC16 /* WQSectionConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQSectionConfig.m; sourceTree = "<group>"; };
+		B6B327A32477A7E000BDEC16 /* WQRightDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQRightDetailTableViewCell.h; sourceTree = "<group>"; };
+		B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQRightDetailTableViewCell.m; sourceTree = "<group>"; };
+		B6B327A62477A93500BDEC16 /* WQSwitchButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSwitchButtonTableViewCell.h; sourceTree = "<group>"; };
+		B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQSwitchButtonTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,6 @@
 				90E48E184422479DF9BE5173 /* Pods-WQTableView.debug.xcconfig */,
 				72AA7DE70685475CD1250036 /* Pods-WQTableView.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +143,7 @@
 		B64FC9262477654500CFC5C7 /* WQTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B6B327A22477A7A100BDEC16 /* WQCellTemplate */,
 				B64FC9272477654500CFC5C7 /* AppDelegate.h */,
 				B64FC9282477654500CFC5C7 /* AppDelegate.m */,
 				B64FC92A2477654500CFC5C7 /* SceneDelegate.h */,
@@ -151,10 +157,10 @@
 				B64FC9392477654800CFC5C7 /* main.m */,
 				B64FC95C2477656300CFC5C7 /* WQTableViewManager.h */,
 				B64FC95D2477656300CFC5C7 /* WQTableViewManager.m */,
-				B64FC95F247769D600CFC5C7 /* UITableViewCell+WQAdd.h */,
-				B64FC960247769D600CFC5C7 /* UITableViewCell+WQAdd.m */,
 				B6B3279F24777D9100BDEC16 /* WQSectionConfig.h */,
 				B6B327A024777D9100BDEC16 /* WQSectionConfig.m */,
+				B64FC95F247769D600CFC5C7 /* UITableViewCell+WQAdd.h */,
+				B64FC960247769D600CFC5C7 /* UITableViewCell+WQAdd.m */,
 			);
 			path = WQTableView;
 			sourceTree = "<group>";
@@ -175,6 +181,17 @@
 				B64FC9502477654800CFC5C7 /* Info.plist */,
 			);
 			path = WQTableViewUITests;
+			sourceTree = "<group>";
+		};
+		B6B327A22477A7A100BDEC16 /* WQCellTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				B6B327A32477A7E000BDEC16 /* WQRightDetailTableViewCell.h */,
+				B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */,
+				B6B327A62477A93500BDEC16 /* WQSwitchButtonTableViewCell.h */,
+				B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */,
+			);
+			path = WQCellTemplate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +353,8 @@
 				B64FC92F2477654500CFC5C7 /* ViewController.m in Sources */,
 				B64FC9292477654500CFC5C7 /* AppDelegate.m in Sources */,
 				B64FC93A2477654800CFC5C7 /* main.m in Sources */,
+				B6B327A82477A93500BDEC16 /* WQSwitchButtonTableViewCell.m in Sources */,
+				B6B327A52477A7E000BDEC16 /* WQRightDetailTableViewCell.m in Sources */,
 				B64FC92C2477654500CFC5C7 /* SceneDelegate.m in Sources */,
 				B6B327A124777D9100BDEC16 /* WQSectionConfig.m in Sources */,
 				B64FC95E2477656300CFC5C7 /* WQTableViewManager.m in Sources */,
