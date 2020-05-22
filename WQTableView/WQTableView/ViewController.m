@@ -50,6 +50,12 @@
         NSLog(@"开关:%d",state);
     }];
     [_tableViewManager addTableViewCell:switchCell didSelect:nil];
+    
+    WQRightDetailWithImageTableViewCell *imageDetail = [[WQRightDetailWithImageTableViewCell alloc] init];
+    [imageDetail configTitleWithText:@"我是标题" leftImage:[UIImage imageNamed:@"friendCircle"]];
+    [_tableViewManager addTableViewCell:imageDetail didSelect:^(UITableViewCell * _Nullable cell) {
+        NSLog(@"333333333");
+    }];
 }
 
 

@@ -12,6 +12,7 @@
 #import "UITableViewCell+WQAdd.h"
 #import "WQRightDetailTableViewCell.h"
 #import "WQSwitchButtonTableViewCell.h"
+#import "WQRightDetailWithImageTableViewCell.h"
 
 @interface WQTableViewManager : NSObject
 

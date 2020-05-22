@@ -22,6 +22,7 @@
 		B6B327A124777D9100BDEC16 /* WQSectionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A024777D9100BDEC16 /* WQSectionConfig.m */; };
 		B6B327A52477A7E000BDEC16 /* WQRightDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */; };
 		B6B327A82477A93500BDEC16 /* WQSwitchButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */; };
+		B6B327AB2477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B327AA2477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQRightDetailTableViewCell.m; sourceTree = "<group>"; };
 		B6B327A62477A93500BDEC16 /* WQSwitchButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQSwitchButtonTableViewCell.h; sourceTree = "<group>"; };
 		B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQSwitchButtonTableViewCell.m; sourceTree = "<group>"; };
+		B6B327A92477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQRightDetailWithImageTableViewCell.h; sourceTree = "<group>"; };
+		B6B327AA2477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQRightDetailWithImageTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,8 @@
 				B6B327A42477A7E000BDEC16 /* WQRightDetailTableViewCell.m */,
 				B6B327A62477A93500BDEC16 /* WQSwitchButtonTableViewCell.h */,
 				B6B327A72477A93500BDEC16 /* WQSwitchButtonTableViewCell.m */,
+				B6B327A92477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.h */,
+				B6B327AA2477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.m */,
 			);
 			path = WQCellTemplate;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				B64FC92F2477654500CFC5C7 /* ViewController.m in Sources */,
 				B64FC9292477654500CFC5C7 /* AppDelegate.m in Sources */,
 				B64FC93A2477654800CFC5C7 /* main.m in Sources */,
+				B6B327AB2477B39900BDEC16 /* WQRightDetailWithImageTableViewCell.m in Sources */,
 				B6B327A82477A93500BDEC16 /* WQSwitchButtonTableViewCell.m in Sources */,
 				B6B327A52477A7E000BDEC16 /* WQRightDetailTableViewCell.m in Sources */,
 				B64FC92C2477654500CFC5C7 /* SceneDelegate.m in Sources */,
